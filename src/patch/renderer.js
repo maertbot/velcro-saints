@@ -43,14 +43,17 @@ function renderStacked(patch) {
 }
 function renderCentered(patch) {
   const borderMotif = patch.id.includes('maertbot') ? `<circle cx="250" cy="250" r="176" fill="none" stroke="${patch.palette[1]}" stroke-width="5" stroke-dasharray="3 16" opacity=".35"/><path d="M110 250 h28 m252 0 h-28 M250 110 v28 m0 252 v-28" stroke="${patch.palette[1]}" stroke-width="4" opacity=".24"/>` : '';
-  const secondary = patch.iconIds[1] ? renderSymbol(patch.iconIds[1], { x:250, y:258, scale:0.22, fill:patch.palette[1], stroke:patch.palette[2], strokeWidth:1.2 }) : '';
-  return borderMotif + renderSymbol(patch.iconIds[0], { x:250, y:245, scale:0.54, fill:patch.palette[2] }) + secondary;
+  const secondary = patch.iconIds[1] ? renderSymbol(patch.iconIds[1], { x:250, y:272, scale:0.28, fill:patch.palette[1], stroke:patch.palette[2], strokeWidth:1.8 }) : '';
+  const primaryScale = patch.iconIds[1] ? 0.48 : 0.58;
+  return borderMotif + renderSymbol(patch.iconIds[0], { x:250, y:232, scale:primaryScale, fill:patch.palette[2] }) + secondary;
 }
 function renderRocker(patch) {
-  return renderSymbol(patch.iconIds[0], { x:250, y:160, scale:0.52, fill:patch.palette[1] }) + centerText({ text: patch.centerText || '', y: 256, size: 34, fill: patch.palette[2] });
+  const secondary = patch.iconIds[1] ? renderSymbol(patch.iconIds[1], { x:250, y:290, scale:0.26, fill:patch.palette[3] || patch.palette[2] }) : '';
+  return renderSymbol(patch.iconIds[0], { x:250, y:174, scale:0.56, fill:patch.palette[1] }) + secondary + centerText({ text: patch.centerText || '', y: 256, size: 34, fill: patch.palette[2] });
 }
 function renderRect(patch) {
-  return renderSymbol(patch.iconIds[0], { x:250, y:160, scale:0.28, fill:patch.palette[2] }) + centerText({ text: patch.centerText || '', y: 264, size: 72, fill: patch.palette[2] }) + centerText({ text: patch.subText || '', y: 330, size: 18, fill: patch.palette[2], family: 'DM Mono, monospace', weight: 500 });
+  const icon = patch.iconIds[0] ? renderSymbol(patch.iconIds[0], { x:250, y:150, scale:0.4, fill:patch.palette[2] }) : '';
+  return icon + centerText({ text: patch.centerText || '', y: 274, size: 72, fill: patch.palette[2] }) + centerText({ text: patch.subText || '', y: 330, size: 18, fill: patch.palette[2], family: 'DM Mono, monospace', weight: 500 });
 }
 
 export function renderPatchSvg(patch, options = {}) {

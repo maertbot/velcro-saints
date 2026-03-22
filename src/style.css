@@ -48,8 +48,8 @@ button { cursor: pointer; }
 .prompt-row { display: grid; grid-template-columns: 1fr auto; gap: 12px; }
 .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 12px; }
 .gallery-card { text-align: left; padding: 12px; }
-.thumb { border-radius: 16px; background: #0f0f12; padding: 8px; aspect-ratio: 1; display: grid; place-items: center; }
-.thumb svg { width: 100%; }
+.thumb { border-radius: 16px; background: radial-gradient(circle at 50% 30%, rgba(255,255,255,.03), transparent 42%), #0f0f12; padding: 8px; aspect-ratio: 1; display: grid; place-items: center; }
+.thumb svg { width: 100%; filter: drop-shadow(0 10px 14px rgba(0,0,0,.3)); }
 .gallery-meta { display: grid; gap: 4px; margin-top: 10px; }
 label { display: block; font-size: 13px; margin-top: 10px; }
 .palette-editor { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }

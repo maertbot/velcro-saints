@@ -33,7 +33,7 @@ export const symbols = [
   icon('medal','Medal','military',['award'],['M34 12 H46 L50 26 L54 12 H66 L60 36 H40 Z M50 36 L66 44 L64 62 L50 72 L36 62 L34 44 Z']),
   // nature 12
   icon('fir-tree','Douglas Fir','nature',['tree','oregon'],['M50 10 L64 28 H56 L72 44 H60 L78 62 H58 V86 H42 V62 H22 L40 44 H28 L44 28 H36 Z']),
-  icon('oak-tree','Oak Tree','nature',['tree'],['M32 42 Q24 32 30 22 Q40 12 50 22 Q60 10 70 22 Q78 34 68 44 Q74 58 62 66 Q58 70 56 82 H44 Q42 70 38 66 Q24 56 32 42 Z']),
+  icon('oak-tree','Oak Tree','nature',['tree'],['M28 42 Q18 30 28 18 Q38 8 50 18 Q62 6 72 18 Q82 30 72 44 Q78 58 64 68 Q58 72 56 90 H44 Q42 72 36 68 Q20 56 28 42 Z'], 0.68),
   icon('mountain','Mountain','nature',['peak'],['M14 76 L36 36 L50 56 L64 28 L86 76 Z']),
   icon('wave','Wave','nature',['water'],['M12 58 Q24 48 34 58 T56 58 T78 58 T88 58 Q76 72 64 64 T40 64 T12 58 Z']),
   icon('sun','Sun','nature',['light'],['M50 26 A18 18 0 1 1 49.9 26 Z M48 6 H52 V18 H48 Z M48 82 H52 V94 H48 Z M6 48 H18 V52 H6 Z M82 48 H94 V52 H82 Z M20 20 L28 28 M72 72 L80 80 M72 28 L80 20 M20 80 L28 72']),
@@ -108,3 +108,4 @@ export const symbols = [
 ];
 
 export const categories = ['military','nature','music','heraldic','tools','ornaments','morale'];
+
